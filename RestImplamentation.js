@@ -6,11 +6,10 @@ async function GetData()
 }
 async function PostData(data)
 {
-    const request = await fetch("http://127.0.0.1:5500/Users", {
-        method: "POST", 
-        body: JSON.stringify(data)
-    });
-    const response = await request.json();
+    const response = await fetch("http://127.0.0.1:5500/Users/Register/contact", {
+        method: "post",
+        body: "put"
+    }).then(response => response.text());
     console.log(response);
 }
 async function DeleteData()
