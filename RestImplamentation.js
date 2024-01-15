@@ -1,12 +1,12 @@
 async function GetData()
 {
-    const request = await fetch("http://127.0.0.1:5500/Users/request");
+    const request = await fetch("http://127.0.0.1:3000/Users/request");
     const response = await request.text();
     console.log(response);
 }
 async function PostData(data)
 {
-    const response = await fetch("http://127.0.0.1:5500/Users/Register/contact", {
+    const response = await fetch("http://127.0.0.1:3000", {
         method: "post",
         body: "put"
     }).then(response => response.text());

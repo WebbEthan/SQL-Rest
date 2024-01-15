@@ -1,2 +1,2 @@
-//PostData({Username: "bob", Age: 5});
-Hit();
+GetData();
+PostData({Username: "bob", Age: 5});
