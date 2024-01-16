@@ -1,7 +1,6 @@
 async function GetData()
 {
-    const request = await fetch("http://127.0.0.1:3000/Users/request");
-    const response = await request.text();
+    const response = await fetch("http://127.0.0.1:3000/Users/request").then(response => response.text());
     console.log(response);
 }
 async function PostData(data)
