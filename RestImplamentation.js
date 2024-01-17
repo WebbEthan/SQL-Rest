@@ -7,7 +7,15 @@ async function PostData(data)
 {
     const response = await fetch("http://127.0.0.1:3000", {
         method: "post",
-        body: "put"
+        body: JSON.stringify(data)
+    }).then(response => response.json());
+    console.log(response);
+}
+async function PutData(data)
+{
+    const response = await fetch("http://127.0.0.1:3000/Users/request", {
+        method: "put",
+        body: JSON.stringify(data)
     }).then(response => response.text());
     console.log(response);
 }
